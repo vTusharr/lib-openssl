@@ -45,7 +45,7 @@ $(eval $(call addlib_s,libopensslglue,$(CONFIG_LIBOPENSSL)))
 LIBOPENSSL_MAJOR=1.1.1
 LIBOPENSSL_MINOR=c
 LIBOPENSSL_VERSION=$(LIBOPENSSL_MAJOR)$(LIBOPENSSL_MINOR)
-LIBOPENSSL_URL=https://www.openssl.org/source/old/$(LIBOPENSSL_MAJOR)/openssl-$(LIBOPENSSL_VERSION).tar.gz
+LIBOPENSSL_URL=https://github.com/openssl/openssl/releases/download/OpenSSL_$(subst .,_,$(LIBOPENSSL_MAJOR))$(LIBOPENSSL_MINOR)/openssl-$(LIBOPENSSL_VERSION).tar.gz
 LIBOPENSSL_PATCHDIR=$(LIBSSL_BASE)/patches
 LIBOPENSSL_SUBDIR=openssl-$(LIBOPENSSL_VERSION)
 $(eval $(call fetch,libssl,$(LIBOPENSSL_URL)))
